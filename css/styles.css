@@ -1,0 +1,89 @@
+:root {
+    --bg: #991111;
+    --panel: #fff;
+    --panelSolid: #72f7e7;
+    --text: #000;
+    --muted: #26ddf988;
+    --accent: #f2f21f;
+    --accent2: #991111;
+    --shadow: #c67a3c88;
+    --radius:14px;
+
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+   height: 100%;}
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system,  'Segoe UI', Roboto,Arial, sans-serif;
+   margin: 0%;
+}
+/* --- profiles --- */
+.profiles-page {
+    min-height: 100%;/*100% de la altura de la ventana*/
+    display: flex;
+    flex-direction: column;
+}
+.profiles-header {
+    padding: 28px 32px;
+}
+.dplus-mark {
+    font-weight: 700;
+    letter-spacing: .3px;
+    font-size: 22px ;
+}
+.dplus {
+    opacity: .85;
+}
+.profiles-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.profile-title {
+    font-size: clamp(26px, 4vw, 44px);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.profile-card {
+    background: var(--panel);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dplus-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+.profile-card span {
+    font-size: 18px;
+    font-weight: 600;
+}
+.profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+.profile-card:hover img {
+    transform: scale(1.05);
+}
