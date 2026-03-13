@@ -33,7 +33,7 @@ body {
 
 .logo {
     background-color: transparent;
-    background-image: url("./img/logos/tacos-plus-logo.png.png");
+    /*background-image: url("./img/logos/tacos-plus-logo.png.png");*/
     background-repeat: no-repeat;
     background-size: contain;
     height: auto;
@@ -125,4 +125,11 @@ body {
     .profiles-main{
         margin-top: 0px;
     }
+}
+.home-page{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    width: 500px;  
 }
