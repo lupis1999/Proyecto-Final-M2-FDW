@@ -1,12 +1,12 @@
 :root {
     --bg: #991111;
-    --panel: #fff;
+    --panel: rgba(10, 14, 24,.72);
     --panelSolid: #72f7e7;
-    --text: #000;
-    --muted: #26ddf988;
+    --text: #fafafa;
+    --muted: rgba(249, 249, 249, .72);
     --accent: #f2f21f;
-    --accent2: #991111;
-    --shadow: #c67a3c88;
+    --accent2: #00a8ff;
+    --shadow: #4cc2ff;
     --radius:14px;
 
 }
@@ -46,44 +46,68 @@ body {
     justify-content: center;
     padding: 24px;
 }
-.profile-title {
+.profiles-title {
     font-size: clamp(26px, 4vw, 44px);
+    margin: 0 0 34px;
+    font-weight: 700;
 }
 
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    width: 100%;
-    max-width: 800px;
+.profiles-grid {
+    display: flex;
+    gap: 34px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.profile-card {
-    background: var(--panel);
-    border-radius: var(--radius);
-    padding: 16px;
+.profiles-card {
+    background:transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    box-shadow: 0 4px 8px var(--shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    color: var(text);
+    border: 0;
+    width: 168px;
+    transition: transform 22s ease;
+    gap: 12px;
 }
-.dplus-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 12px;
+.profiles-card img {
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 999px;
+    transition: transform .3s ease,  box-shadow .3s ease border-color .3s ease;
 }
-.profile-card span {
+.profiles-card span {
+    opacity: .92;
+    letter-spacing: .2px;
     font-size: 18px;
-    font-weight: 600;
 }
-.profile-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px var(--shadow);
+.profiles-card:hover {
+    transform: translateY(-3px);
 }
 
-.profile-card:hover img {
-    transform: scale(1.05);
+.profiles-card:hover img {
+   transform: scale(1.05);
+   border: 3px solid rgb(255, 255, 255);
+}
+.add-profile {
+   cursor: not-allowed; 
+   opacity: .55;
+}
+.add-circle {
+    width: 132px;
+    height: 132px;
+    border-radius: 999%;
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+   background:  #4E4E51;
+    place-items: center;
+    
+}
+.profiles-hint {
+    margin-top: 26px;
+    color: var(--muted);
+    font-size: 14px;
+    
 }
