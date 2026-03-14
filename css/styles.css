@@ -1,0 +1,135 @@
+:root {
+    --bg: #991111;
+    --panel: rgba(10, 14, 24,.72);
+    --panelSolid: #72f7e7;
+    --text: #fafafa;
+    --muted: rgba(249, 249, 249, .72);
+    --accent: #f2f21f;
+    --accent2: #00a8ff;
+    --shadow: #4cc2ff;
+    --radius:14px;
+
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+   height: 100%;}
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inspire-Bold, sans-serif;
+   margin: 0%;
+}
+/* --- profiles --- */
+.profiles-page {
+    min-height: 100%;/*100% de la altura de la ventana*/
+    display: flex;
+    flex-direction: column;
+}
+.profiles-header {
+    padding: 28px 32px;
+}
+
+.logo {
+    background-color: transparent;
+    /*background-image: url("./img/logos/tacos-plus-logo.png.png");*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+    min-height: 50px;
+    min-width: 86px;
+    width: auto;
+}
+.profiles-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    margin-top: -300px;
+}
+.profiles-title {
+    margin: 0 0 34px;
+    font-size: 32PX;
+    letter-spacing: .11px;
+    line-height: 1.2;
+}
+
+.profiles-grid {
+    display: flex;
+    gap: 34px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profiles-card {
+    background:transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: var(text);
+    border: 0;
+    width: 168px;
+    transition: transform 22s ease;
+    gap: 12px;
+}
+.profiles-card img {
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 999px;
+    transition: transform .3s ease,  box-shadow .3s ease border-color .3s ease;
+}
+.profiles-card span {
+    opacity: .92;
+    letter-spacing: .2px;
+    font-size: 18px;
+}
+.profiles-card:hover {
+    transform: translateY(-3px);
+}
+
+.profiles-card:hover img {
+   transform: scale(1.05);
+   border: 3px solid rgb(255, 255, 255);
+}
+.add-profile {
+   cursor: not-allowed; 
+   opacity: .55;
+}
+.add-circle {
+    width: 132px;
+    height: 132px;
+    border-radius: 999%; 
+    display: grid;
+    place-items: center;
+    font-size: 80px;
+    font-weight: 500;
+    background:  #4E4E51;
+    color: rgb(255, 255, 255);
+  
+   
+   
+    
+}
+.profiles-hint {
+    margin-top: 26px;
+    color: var(--muted);
+    font-size: 14px;
+
+}
+@media (max-wdth:480px){
+    .profiles-main{
+        margin-top: 0px;
+    }
+}
+.home-page{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    width: 500px;  
+}
